@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: tg-order-forwarder
+    env: node
+    plan: free
+    buildCommand: "npm i"
+    startCommand: "npm start"
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: SOURCE_CHAT_ID
+        sync: false
+      - key: DEST_CHAT_ID
+        sync: false
+      - key: BASE_URL
+        sync: false
+    healthCheckPath: /health
