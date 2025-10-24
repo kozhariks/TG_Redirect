@@ -9,7 +9,9 @@ services:
     envVars:
       - key: BOT_TOKEN
         sync: false
-      - key: SOURCE_CHAT_ID
+      - key: BUSINESS_CHAT_ID
+        sync: false
+      - key: SOURCE_SENDER_ID
         sync: false
       - key: DEST_CHAT_ID
         sync: false
